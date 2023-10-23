@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+pillow = "*"
+python-decouple = "*"
+pymysql = "*"
+whitenoise = "*"
 
 [dev-packages]
 
