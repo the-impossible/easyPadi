@@ -5,3 +5,9 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 
 class LandingPage(TemplateView):
     template_name = "index.html"
+
+class AboutPage(TemplateView):
+    template_name = "about.html"
+
+class ContactPage(TemplateView):
+    template_name = "contacts.html"

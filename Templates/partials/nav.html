@@ -1,14 +1,15 @@
 {% load static %}
 <nav class="navbar">
     <ul class="navbar-links">
-      <li class="navbar-dropdown active">
-        <a href="index-2.html">Home</a>
+      <li class="navbar-dropdown {% if request.path == '/' %} active {% endif %}">
+        <a href="{% url 'app:home' %}">Home</a>
       </li>
-      <li class="navbar-dropdown">
-        <a href="about.html">About Us</a>
+
+      <li class="navbar-dropdown {% if request.path == '/about' %} active {% endif %}">
+        <a href="{% url 'app:about' %}">About Us</a>
       </li>
-      <li class="navbar-dropdown">
-        <a href="contacts.html">Contacts</a>
+      <li class="navbar-dropdown {% if request.path == '/contact' %} active {% endif %}">
+        <a href="{% url 'app:contact' %}">Contacts</a>
       </li>
     </ul>
   </nav>

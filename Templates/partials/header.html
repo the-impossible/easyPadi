@@ -1,0 +1,72 @@
+{% load static %}
+
+<!-- header -->
+<header>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-2">
+                <div class="header-style">
+                    <a href="{% url 'app:home' %}">
+                        {% include 'partials/logo.html' %}
+                    </a>
+                    <div class="extras bag">
+                        <div class="bar-menu">
+                        <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                {% block nav %}{% include 'partials/nav.html' %}{% endblock nav %}
+            </div>
+            <div class="col-lg-3">
+                <div class="extras bag">
+
+                    <a href="javascript:void(0)" class="button button-2 menu-btn">Download Now</a>
+                </div>
+            </div>
+            <div class="menu-wrap">
+                <div class="menu-inner ps ps--active-x ps--active-y">
+                    <span class="menu-cls-btn"><i class="cls-leftright"></i><i class="cls-rightleft"></i></span>
+                    <div class="checkout-order">
+                        <div class="title-checkout">
+                            <h2>Download Now</h2>
+                        </div>
+                        <p class="my-5">Our app is available on both the Apple Store and Google Store. Click below to download it on your preferred platform</p>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="">
+                                    <img alt="logo" src="{% static 'assets/img/apple.png' %}" width="200">
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="">
+                                    <img alt="logo" src="{% static 'assets/img/play.png' %}" width="200">
+                                </a>
+                            </div>
+                        </div>
+
+                        <p class="my-5">easyPadi prides itself on the user-friendliness of our app. We've designed it with simplicity and efficiency in mind to ensure that every user, regardless of their technological expertise, can navigate it effortlessly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-nav hmburger-menu" id="mobile-nav" style="display:block;">
+
+                <div class="res-log">
+                    <a href="index-2.html">
+                    {% include 'partials/logo.html' %}
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="{% url 'app:home' %}">Home</a> </li>
+                    <li><a href="{% url 'app:about' %}">About Us</a></li>
+                    <li><a href="{% url 'app:contact' %}">contacts</a></li>
+                </ul>
+
+                <a href="JavaScript:void(0)" id="res-cross"></a>
+            </div>
+        </div>
+    </div>
+</header>
