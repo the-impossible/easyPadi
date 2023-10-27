@@ -1,6 +1,6 @@
 from .base import *
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.easypadi.com", "easypadi.com"]
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -8,16 +8,14 @@ SECRET_KEY = config('SECRET_KEY')
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': 3306,
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
 # Media files
-STATIC_ROOT = '/home/easypadi/public_html/static'
-MEDIA_ROOT = '/home/easypadi/public_html/media'
+STATIC_URL = '/static/'
+#STATIC_ROOT = '/home/kadpwtrj/easypadi.com/public_html/static'
+STATIC_ROOT = '/home/kadpwtrj/easypadi.com/Static'
+MEDIA_ROOT = '/home/kadpwtrj/easypadi.com/public_html/media'

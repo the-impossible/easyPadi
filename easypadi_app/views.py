@@ -11,3 +11,9 @@ class AboutPage(TemplateView):
 
 class ContactPage(TemplateView):
     template_name = "contacts.html"
+
+class PolicyPage(TemplateView):
+    template_name = "policy.html"
+
+class ErrorPage(TemplateView):
+    template_name = "404.html"
